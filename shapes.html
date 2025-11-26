@@ -1,38 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shapes</title>
-  <style>
-    .rectangle {
-      display: flexbox;
-      grid: 20px;
-      grid-template-column: 500px;
-      grid-template-rows: 10px 20px;
-      background: #0000FF;
-    height: 500px;
-      width: 100px;
-    }
-    .boxtwo {
-            display: flexbox;
-      margin-left: 20px;
-      gap: 10px;
-      grid: 20px;
-      grid-template-column: 500px;
-      grid-template-rows: 10px 20px;
-      background: #0000FF;
+<html>
+<head>
+<title>Page Title</title>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    padding: 20px;
+    width: fit-content;
+}
+
+/* Left tall column */
+.left-col {
+    grid-row: span 4;
+    width: 100px;
+    background: #dcdcdc;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Top row */
+.top-row {
+    display: flex;
+    gap: 10px;
+}
+
+.top-row .box {
+    width: 200px;
     height: 100px;
-      width: 200px;
+    border: 2px solid #000;
+    background: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Middle Y row */
+.mid-row {
+    display: flex;
+    gap: 10px;
+}
+
+.mid-row .y-box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    background: #ffffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.g-row {
+    height: 120px;
+    border: 2px solid #000;
+    background: #cce5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-left {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    background: #ddd;
+    display: flex;
+    align-items: center;
     }
-  </style>
-<body>
-  <div class="rectangle">
-  <div class="rectangle">1</div>
-    <div class="rectangle">1</div>
-    <div class="rectangle">1</div>
-<div class="boxtwo">
-  <div class="boxtwo">1</div>
-  <div class="boxtwo">2</div>
-  
-  
-</html>
+</style>
+<div class="container">
+
+    <div class="left-col">B</div>
+
+    <div class="top-row">
+        <div class="box">B</div>
+        <div class="box">B</div>
+        <div class="box">B</div>
+    </div>
+
+    <div class="mid-row">
+        <div class="y-box">Y</div>
+        <div class="y-box">Y</div>
+        <div class="y-box">Y</div>
+    </div>
+
+    <div class="g-row">G</div>
