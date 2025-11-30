@@ -37,6 +37,14 @@
     align-items: center;
     justify-content: center;
 }
+    .y-container {
+        border: 2px solid black;
+        background-color: #0000FF
+        padding: 10px;
+        width: fit-content;
+        display: flex;
+        gap: 10px;
+    }
 .mid-row {
     display: flex;
     gap: 10px;
@@ -50,23 +58,17 @@
     align-items: center;
     justify-content: center;
 }
-.g-row {
-    height: 100px;
-    weight: 50px
-    gap: 10px;
-    border: 2px solid;
-    background:#008000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.bottom-left {
-    width: 50px;
-    height: 100px;
-    border: 2px solid;
-    background:#008000;
-    display: flex;
-    align-items: center;
+    .g-box {
+        height: 120px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+    }
+    .bottom-box {
+        height: 100px;
+        border: 2px solid black;
     }
 </style>
 <div class="container">
@@ -75,10 +77,11 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
-    <div class="mid-row">
+        <div class="y-container">
+                <div class="mid-row">
         <div class="y-box"></div>
-        <div class="y-box"></div>
-        <div class="y-box"></div>
+        <div class="y-box">Y</div>
+        <div class="y-box">Y</div>
     </div>
     <div class="g-row"></div>
     <div class="g-row"></div>
