@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mondrian</title>
+
+<style>
+  body{
+    margin:0;
+    background:#ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+  }
+
+  .frame{
+    background:black;
+    padding:12px;
+    width:640px;
+    height:480px;
+    box-sizing:border-box;
+  }
+
+  .grid{
+    display:grid;
+    width:100%;
+    height:100%;
+    background:black;
+    gap:16px;                     /* black bars between blocks */
+    grid-template-columns: 1fr 0.5fr 2fr;
+    grid-template-rows: 0.6fr 1.4fr 0.7fr;
+    grid-template-areas:
+      "yellowTop yellowTop red"
+      "whiteTall whiteTall red"
+      "whiteSmall blue whiteWide"
+      "whiteSmall yellowBot whiteWide";
+  }
+
+  .block{width:100%;height:100%;}
+
+  .yellowTop {grid-area: yellowTop; background:#f2c700;}
+  .red       {grid-area: red;       background:#d3312d;}
+  .whiteTall {grid-area: whiteTall; background:white;}
+  .whiteSmall{grid-area: whiteSmall;background:white;}
+  .blue      {grid-area: blue;      background:#1d4ecf;}
+  .whiteWide {grid-area: whiteWide; background:white;}
+  .yellowBot {grid-area: yellowBot; background:#f2c700;}
+</style>
+
+</head>
+<body>
+
+<div class="frame">
+  <div class="grid">
+    <div class="block yellowTop"></div>
+    <div class="block red"></div>
+    <div class="block whiteTall"></div>
+    <div class="block whiteSmall"></div>
+    <div class="block blue"></div>
+    <div class="block whiteWide"></div>
+    <div class="block yellowBot"></div>
+  </div>
+</div>
+
+</body>
+</html>
