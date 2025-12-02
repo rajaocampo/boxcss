@@ -1,56 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mondrian Layout</title>
-    <link rel="stylesheet" href="style.css">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kusina Filipina</title>
+<style>
 body {
-    background: #eee;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+nav {
+    background: #f7d800;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
 }
-.grid {
-    width: 600px;
-    height: 600px;
-    background: black;
-    display: grid;
-    grid-template-columns: 1.2fr 2fr 0.6fr;
-    grid-template-rows: 1.2fr 1.6fr 0.6fr;
-    gap: 10px; 
-    padding: 10px;
-    box-sizing: border-box;
+nav ul li {
+    font-size: 16px;
+    cursor: pointer;
 }
-.red     { background: #e44a34; }
-.blue    { background: #255b9c; }
-.yellow  { background: #e8c446; }
-.black   { background: #000; }
-.gray1,
-.gray2,
-.gray3   { background: #dfdbd6; }
-.red    { grid-column: 1 / 2; grid-row: 1 / 2; }
-.gray1  { grid-column: 2 / 4; grid-row: 1 / 2; }
-
-.gray2  { grid-column: 1 / 3; grid-row: 2 / 3; }
-.blue   { grid-column: 3 / 4; grid-row: 2 / 3; }
-
-.gray3  { grid-column: 3 / 4; grid-row: 3 / 4; }
-
-.yellow { grid-column: 1 / 2;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.welcome {
+    text-align: center;
+    padding: 25px 40px;
+    background: white;
+    line-height: 1.7;
+    font-size: 18px;
+    max-width: 900px;
+    margin: auto;
+}
+.hero2 {
+    margin-top: 30px;
+}
+.about-container {
+    background: #f7d800;
+    padding: 40px;
+    width: 80%;
+    margin: 40px 20px;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+.about-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.about-text {
+    font-size: 17px;
+    line-height: 1.7;
+}
+    .side {
+    grind-column: span 2;
+        float: right;
+    }
+.privacy {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+    padding: 0 20px;
+    color: #333;
+}
+.contact {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.continue-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 0;
+    background: #1a73e8;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.section-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+    background: #f7d800;
+    padding: 20px;
+    font-weight: bold;
+}
 </style>
 </head>
 <body>
-    <div class="grid">
-        <div class="red"></div>
-        <div class="gray1"></div>
-        <div class="gray2"></div>
-        <div class="blue"></div>
-        <div class="gray3"></div>
-        <div class="yellow"></div>
-        <div class="black"></div>
+<nav>
+    <div class="logo">KF</div>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Feedback</li>
+    </ul>
+</nav>
+<div class="hero">
+    <img src="610e4434-f377-4cae-8c21-9065db454d75.jpg" alt="Food Banner">
+</div>
+<div class="welcome">
+    Welcome to Kusina Filipina, your ultimate destination for exploring the<br>vibrant and diverse flavors of Filipino cuisine. 
+    Here, we celebrate the<br>rich culinary heritage of the Philippines, bringing you authentic recipes<br> and delightful stories 
+    that capture the essence of Filipino cooking.
+</div>
+    <hr>
+<div class="hero hero2">
+    <img src="b4625051-ea6f-43d9-ae10-d7641cb05477.jpg" alt="Food Banner 2">
+</div>
+    <table>
+        <tr>
+<td> <div class="about-container">
+    <div class="about-title">About Us</div>
+    <div class="about-text">
+        Kusina Filipina is more than just a recipe collection; it’s<br>a journey through the heart of Filipino culture. Our<br>mission is
+        to share the treasured recipes passed down<br>through generations, while also highlighting the<br>innovative twists that modern
+        Filipino chefs bring to<br>the table. We are passionate about preserving and<br>promoting the unique tastes of the Philippines, from<br> comforting classics to the newest 
+        dishes that<br>define our evolving culinary landscape. Join us as we<br>explore the delicious world of "Mga Panlasang Pinoy"<br>
+        Filipino flavors that warm the soul and bring people<br> together.</t
     </div>
+</div>
+  <td><div class="side">
+        <img src="f940272f-690e-488e-8f67-feb3ea944ea8.jpg" alt="Food Banner 3" float-right="100px;" width="200" height="350" </td>
+    </div>
+    </tr>
+    </table>
+<div class="privacy">
+    <strong>Privacy Policy</strong><br><br>
+    At Kusina Filipina, we respect your privacy. We collect minimal data to improve your experience and ensure the security of our site. 
+    We do not share your information with third parties without your consent. By using our website, you agree to our privacy practices. 
+    For more details, please contact us.
+</div>
+<div class="contact">
+    Email: KusinaFilipina@gmail.com &nbsp;&nbsp; | &nbsp;&nbsp; Call: (098) 765-4321
+</div>
+<a class="continue-btn" href="#">Continue</a>
+<div class="section-title">Mga Panlasang Pinoy<br>Recipes</div>
 </body>
 </html>
